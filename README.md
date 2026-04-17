@@ -1,4 +1,93 @@
-# Home Harmony
+# 🏠 Home Harmony
+
+**Gestión de tareas domésticas para parejas con distribución equilibrada 65/35**
+
+Una aplicación moderna para coordinar tareas diarias, semanales y mensuales entre dos personas, con seguimiento de progreso y diseño ADHD-friendly.
+
+## 🚀 Inicio Rápido
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+```
+
+La aplicación estará disponible en: **http://localhost:8081**
+
+## 📁 Estructura del Proyecto
+
+```
+home-harmony/
+├── config/           # Archivos de configuración
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+│   ├── tailwind.config.ts
+│   ├── tsconfig*.json
+│   ├── vite.config.ts
+│   └── vitest.config.ts
+├── docs/             # Documentación completa
+│   ├── README.md     # Documentación técnica detallada
+│   └── USER_FLOWS.md # Flujos de usuario
+├── src/              # Código fuente
+│   ├── components/   # Componentes reutilizables
+│   ├── lib/          # Utilidades y datos
+│   └── ...
+├── tests/            # Configuración de testing
+│   ├── playwright.config.ts
+│   └── playwright-fixture.ts
+└── public/           # Assets estáticos
+```
+
+## 📖 Documentación
+
+- **[Documentación Técnica](docs/README.md)** - Guía completa de desarrollo
+- **[Flujos de Usuario](docs/USER_FLOWS.md)** - Experiencia de usuario detallada
+- **[Arquitectura](docs/README.md#architecture)** - Diseño del sistema
+
+## 🎯 Características Principales
+
+- ✅ **Distribución 65/35** - Balance equilibrado de carga de trabajo
+- ✅ **31 tareas predefinidas** - Lista completa de tareas domésticas
+- ✅ **4 frecuencias** - Diarias, semanales, mensuales, sin fecha
+- ✅ **Sistema de prioridades** - Baja, media, alta
+- ✅ **Íconos específicos** - Cada tarea tiene su ícono único
+- ✅ **Glassmorphism UI** - Diseño moderno y accesible
+- ✅ **Persistencia local** - Datos guardados en navegador
+- ✅ **Responsive** - Funciona en móvil y desktop
+
+## 🛠️ Stack Tecnológico
+
+- **React 18** + TypeScript
+- **Vite** + SWC para desarrollo rápido
+- **Tailwind CSS** + shadcn/ui
+- **Radix UI** para accesibilidad
+- **Lucide React** para íconos
+- **localStorage** para persistencia
+
+## 📱 Vistas de la Aplicación
+
+1. **🏠 Home** - Resumen del día y progreso
+2. **📝 Tasks** - Gestión completa de tareas
+3. **📊 Stats** - Distribución de carga de trabajo
+4. **👤 Profile** - Información de usuarios
+
+## 🎨 Diseño
+
+- **Paleta Fresh & Clean**: #E6FAF5, #382F52, #2950A3, #D8E280
+- **Glassmorphism** - Efectos de vidrio con backdrop-blur
+- **ADHD-Friendly** - Contraste WCAG AA+, jerarquía clara
+- **Responsive** - Adaptable a todos los tamaños de pantalla
+
+---
+
+**Versión**: 1.0.0
+**Última actualización**: 17 de abril de 2026</content>
+<parameter name="filePath">/Users/sofia/Documents/home-harmony/README.md# Home Harmony
 
 A modern household chore management application built with React, TypeScript, and Tailwind CSS. Helps couples or roommates coordinate daily, weekly, and monthly chores with progress tracking, notifications, and gamification features.
 

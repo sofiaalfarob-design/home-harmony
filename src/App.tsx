@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { ComponentType, useEffect, useMemo, useState } from "react";
 import {
   Home,
   ListChecks,
@@ -79,7 +79,7 @@ const USER_LABELS: Record<ChoreUser, string> = { A: "User A", B: "User B" };
 const TASK_ICON_FALLBACK =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='64' height='64' rx='18' fill='%232950A3'/%3E%3Cpath d='M20 34l10 10 18-22' fill='none' stroke='%23D8E280' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
 
-const TASK_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+const TASK_ICONS: Record<string, ComponentType<{ className?: string }>> = {
   // Diarias
   "breakfast-a": Coffee,
   "breakfast-b": Utensils,
@@ -132,8 +132,10 @@ const DEFAULT_TASK_FORM = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<"home" | "tasks" | "stats" | "profile">("home");
-  const [chores, setChores] = useState<Chore[]>(() => loadChores());
+  const initialChores = loadChores();
+  const [chores, setChores] = useState<Chore[]>(() => initialChores);
+  const [currentView, setCurrentView] = useState<"home" | "tasks" | "stats" | "profile">
+    (() => (initialChores.length > 0 ? "tasks" : "home"));
   const [showCompleted, setShowCompleted] = useState(true);
   const [activeTaskTab, setActiveTaskTab] = useState<Frequency>("daily");
   const [taskForm, setTaskForm] = useState(DEFAULT_TASK_FORM);
